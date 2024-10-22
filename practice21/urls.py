@@ -23,4 +23,5 @@ urlpatterns = [
     path('base/',base,name='base'),
     path('display/',display,name='display'),
     path('insert_webpage/',insert_webpage,name='insert_webpage'),
+    path('select_multiple/',select_multiple,name ='select_multiple'),
 ]

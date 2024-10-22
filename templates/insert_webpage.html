@@ -5,26 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <center>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<body class="p-3 mb-2 bg-secondary-subtle text-secondary-emphasis">
+    
         <h1>insert_webpage</h1>
         <form  method="post"><br>
             {%csrf_token%}
-            <label for="tn">topin_name</label>
+            <label for="tn"  class="form-label">topin_name</label>
             <select name="tn" id="tn">
                 {% for to in LTO %}
                 <option value="{{to.topic_name}}">{{to.topic_name}}</option>
                 {% endfor %}
             </select><br><br><br>
-            <label for="name">name</label>
-            <input type="text" name="name" id="name"><br><br>
-            <label for="email">email</label>
-            <input type="email" name="email" id="email"><br><br>
-            <label for="url">url</label>
-            <input type="url" name="url" id="url"><br><br>
-            <input type="submit" value="submit">
+            <label for="name"  class="form-label">name</label>
+            <input type="text" name="name" id="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"><br><br>
+            <label for="email"  class="form-label">email</label>
+            <input type="email" name="email" id="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"><br><br>
+            <label for="url"  class="form-label">url</label>
+            <input type="url" name="url" id="url" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"><br><br>
+            <input type="submit" value="submit" class="btn btn-primary">
             
         </form>
-    </center>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>

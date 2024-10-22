@@ -27,3 +27,14 @@ def insert_webpage(request):
         return HttpResponse('webpage is created ')
     
     return render(request,'insert_webpage.html',d)
+def select_multiple(request):
+    LTO = topic.objects.all()
+    d = {'LTO':LTO}
+    if request.method == 'POST':
+        MTN = request.POST.getlist('tn')
+        EQST = webpage.objects.none()
+        for topi in MTN:
+            EQST = EQST|webpage.objects.filter(topic_name = topi)
+        d1 = {'EQST':EQST}
+        return render(request,'display_webpage.html',d1)
+    return render(request,'select_multiple.html',d)
