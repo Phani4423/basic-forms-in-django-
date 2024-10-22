@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('base/',base,name='base'),
     path('display/',display,name='display'),
+    path('insert_webpage/',insert_webpage,name='insert_webpage'),
 ]
